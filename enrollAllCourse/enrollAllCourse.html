@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title = "navigate to Account" class="sdls-box">
+        <lightning-button label="Navigate to account" onclick={navigateToAccount}></lightning-button>
+        <lightning-button label="Navigate to recent account" onclick={navigateToRecentAccount}></lightning-button>
+        <lightning-button label="Navigate to new account" onclick={navigateToNewAccount}></lightning-button>
+        <lightning-button label="Navigate to view account" onclick={navigateToViewAccount}></lightning-button>
+        <lightning-button label="Navigate to edit account" onclick={navigateToaditAccount}></lightning-button>
+        <lightning-button label="Navigate to Udemy" onclick={navigateToUdemy}></lightning-button>
+        </lightning-card>
+    <div class="slds-box slds-grid slds-gutters slds-wrap">
+        <template for:each={allCourseDetailInfo} for:item="course">
+            <c-enroll-course key={course.courseName} course-detail-info={course} class="slds-col"></c-enroll-course>
+        </template> 
+    </div>   
+</template>
